@@ -93,19 +93,25 @@ namespace slotmakinesi
 			if (index1 == index2 && index1 == index3)
 			{
 
-				puan = puan + 100;
-				puanText.Text = "Kazanılan Puan: " + puan.ToString();
-
-				toplampuan.Text = "Toplam Puan: " + toplampuan1.ToString();
-			}
-			else if (index1 == index2 || index2 == index3 || index1 == index3)
-			{
-				puan = puan + 50;
+				puan =  100;
 				puanText.Text = "Kazanılan Puan: " + puan.ToString();
 				toplampuan1 += puan;
 				toplampuan.Text = "Toplam Puan: " + toplampuan1.ToString();
 			}
-			
+			else if (index1 == index2 || index2 == index3 || index1 == index3)
+			{
+				puan = 50;
+				puanText.Text = "Kazanılan Puan: " + puan.ToString();
+				toplampuan1 += puan;
+				toplampuan.Text = "Toplam Puan: " + toplampuan1.ToString();
+			}
+			else
+			{
+				puan = 0;
+				puanText.Text = "Kazanılan Puan: " + puan.ToString();
+				toplampuan1 += puan;
+				toplampuan.Text = "Toplam Puan: " + toplampuan1.ToString();
+			}
 				if (toplampuan1 > 1000)
 			{
 				Application.Exit();
